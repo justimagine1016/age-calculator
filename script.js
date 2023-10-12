@@ -12,7 +12,7 @@ function calculateAge() {
 
     // Extract day, month, and year components from the current date.
     let d2 = today.getDate();
-    let m2 = today.getMonth() + 1;
+    let m2 = today.getMonth();
     let y2 = today.getFullYear();
 
     // Initialize variables to store the calculated age components.
