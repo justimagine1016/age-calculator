@@ -4,7 +4,7 @@ function calculateAge() {
 
     // Extract day, month, and year components from the birth date.
     let d1 = birthDate.getDate();
-    let m1 = birthDate.getMonth() + 1; // Adding +1 because months are 0-based.
+    let m1 = birthDate.getMonth(); // Months are 0-based.
     let y1 = birthDate.getFullYear();
 
     // Get the current date.
@@ -12,7 +12,7 @@ function calculateAge() {
 
     // Extract day, month, and year components from the current date.
     let d2 = today.getDate();
-    let m2 = today.getMonth();
+    let m2 = today.getMonth(); // Months are 0-based.
     let y2 = today.getFullYear();
 
     // Initialize variables to store the calculated age components.
@@ -45,8 +45,4 @@ function calculateAge() {
 
     // Display the calculated age in the HTML element with ID "result."
     result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months, and <span>${d3}</span> days old`;
-}
-
-function getDaysInMonth(year, month) {
-    return new Date(year, month, 0).getDate();
 }
